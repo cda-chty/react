@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello World</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Exo1() {
+                const song = 'Chachacha';
+                const numberOfGoodReasonsToBeHere = 150;
+                const disabledButton = <button disabled>Bouton</button>;
+
+                return (
+                    <div>
+                        <p>Afficher ici le contenu de la variable song</p>
+                        <p>{song}</p>
+                        <p>Afficher ici le contenu de numberOfGoodReasonsToBeHere</p>
+                        <p>{numberOfGoodReasonsToBeHere}</p>
+                        <p>Afficher ici le contenu de disabledButton</p>
+                        {disabledButton}
+                    </div>
+                );
+            }
+
+            function Exo2() {
+                const notes = [0, 4, 10, 20, 15];
+
+                const person = {
+                    firstname: 'Boulette',
+                    lastname: 'Fromage',
+                    age: 15,
+                };
+
+                const actionsList = (
+                    <div>
+                        <button>Modifier</button>
+                        <button>Annuler</button>
+                    </div>
+                );
+
+                return (
+                    <div>
+                        <p>
+                            Afficher le contenu du tableau notes sous forme de liste
+                            <a href="https://react.dev/learn/rendering-lists">Documentation sur l'affichage des listes</a>
+                        </p>
+                        <ul>
+                            {notes.map(note => <li>{note}</li>)}
+                        </ul>
+                        <p>Afficher le contenu de la constante person sous la forme person.value</p>
+                        <h1>{person.firstname} {person.lastname} a {person.age} ans</h1>
+                        <p>Afficher le contenu de la constante actionsList</p>
+                        {actionsList}
+                    </div>
+                );
+            }
+
+            function Exo3() {
+                const person = {
+                    name: 'Charly',
+                    age: 66,
+                    job: {
+                        name: 'Styliste',
+                        since: '29 Avril 2020',
+                    }
+                };
+
+                const shoppingCart = [
+                    {
+                        name: 'Concombre',
+                        type: 'Legume'
+                    },
+                    {
+                        name: 'Courgette',
+                        type: 'Legume',
+                    },
+                    {
+                        name: 'Endive',
+                        type: 'Beurk',
+                    },
+                    {
+                        name: 'Steak',
+                        type: 'Frais',
+                    },
+                    {
+                        name: 'Sanglier',
+                        type: null,
+                    }
+                ];
+
+                /**
+                * Cette fonction renvoie une div au format JSX
+                */
+                const someDiv = () => <div>Je suis une div</div>;
+
+                /**
+                * Cette fonction renvoie un bouton Valider au format JSX
+                */
+                const validateButton = () => <button>Valider</button>;
+
+                /**
+                * Cette fonction renvoie une liste des séries à regarder pendant le confinement
+                */
+                const catalogSeries = () => {
+                    return [
+                        {
+                            name: 'One Sheep',
+                            episodes: 999999,
+                            note: 5,
+                        },
+                        {
+                            name: 'Vikongs',
+                            episodes: 5,
+                            note: 19,
+                        },
+                        {
+                            name: 'Spartakis, au bon lait de brebis',
+                            episodes: 15,
+                            note: 12,
+                        }
+                    ];
+                }
+
+                const series = catalogSeries();
+
+                return (
+                    <div>
+                        {someDiv()}
+                        <p>Consulter la fonction someDiv. En vous basant sur le même modèle, remplissez la fonction validateButton</p>
+                        <p>Appeler la fonction validateButton pour générer le bouton en dessous de ce paragraphe</p>
+                        {validateButton()}
+                        <p>Afficher toutes les propriétés de la variable person</p>
+                        <p>{person.name} a {person.age} ans. Il est {person.job.name} depuis le {person.job.since}</p>
+                        <p>Afficher toutes les propriétés du panier de courses</p>
+                        <p>Afficher toutes les propriétés du catalogue de séries</p>
+                    </div>
+                );
+            }
+
+            function Exo4() {
+
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+                <div>
+                    <Exo1 />
+                    <Exo2 />
+                    <Exo3 />
+                    <Exo4 />
+                </div>
+            );
+        </script>
+    </body>
+</html>
