@@ -65,11 +65,109 @@
             )
         }
 
+        function Exo3() {
+            const person = {
+                name: 'Charly',
+                age: 66,
+                job: {
+                    name: 'Styliste',
+                    since: '29 Avril 2020',
+                }
+            };
+
+            const shoppingCart = [
+                {
+                    name: 'Concombre',
+                    type: 'Legume'
+                },
+                {
+                    name: 'Courgette',
+                    type: 'Legume',
+                },
+                {
+                    name: 'Endive',
+                    type: 'Beurk',
+                },
+                {
+                    name: 'Steak',
+                    type: 'Frais',
+                },
+                {
+                    name: 'Sanglier',
+                    type: null,
+                }
+            ];
+
+            /**
+             * Cette fonction renvoie une div au format JSX
+             */
+            const someDiv = () => <div>Je suis une div</div>;
+
+            /**
+             * Cette fonction renvoie un bouton Valider au format JSX
+             */
+            const validateButton = () => <button>Valider</button>;
+
+            /**
+             * Cette fonction renvoie une liste des séries à regarder pendant le confinement
+             */
+            const catalogSeries = () => {
+                return [
+                    {
+                        name: 'One Sheep',
+                        episodes: 999999,
+                        note: 5,
+                    },
+                    {
+                        name: 'Vikongs',
+                        episodes: 5,
+                        note: 19,
+                    },
+                    {
+                        name: 'Spartakis, au bon lait de brebis',
+                        episodes: 15,
+                        note: 12,
+                    }
+                ];
+            }
+
+            const series = catalogSeries();
+
+            return (
+                <div>
+                    {someDiv()}
+                    <p>Consulter la fonction someDiv. En vous basant sur le même modèle, remplissez la fonction validateButton</p>
+                    <p>Appeler la fonction validateButton pour générer le bouton en dessous de ce paragraphe</p>
+                    {validateButton()}
+                    <p>Afficher toutes les propriétés de la variable person</p>
+                    <p>{person.name} a {person.age} ans. Il est {person.job.name} depuis {person.job.since}</p>
+                    <p>Afficher toutes les propriétés du panier de courses</p>
+                    <ul>
+                        {shoppingCart.map((item, index) =>
+                            <li key={index}>
+                                {item.name}
+                                {item.type && <span> - {item.type}</span>}
+                            </li>
+                        )}
+                    </ul>
+                    <p>Afficher toutes les propriétés du catalogue de séries</p>
+                    <ul>
+                        {series.map((serie, index) =>
+                            <li key={index}>
+                                {serie.name} - {serie.episodes} épisodes - {serie.note} / 20
+                            </li>
+                        )}
+                    </ul>
+                </div>
+            );
+        }
+
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(
             <div>
                 <Exo1 />
                 <Exo2 />
+                <Exo3 />
             </div>
         );
     </script>
