@@ -1,6 +1,9 @@
 import Button from './Button';
 import List from './List';
 import Text from './Text';
+import State1 from './exercices-state/State1';
+import State2 from './exercices-state/State2';
+import State3 from './exercices-state/State3';
 
 function App() {
   return (
@@ -10,8 +13,16 @@ function App() {
       <Button title="Ajouter" />
       <Button title="Envoyer" />
 
+      <h2>Le cours</h2>
       <Text />
       <List />
+
+      <h2>State 1</h2>
+      <State1 />
+      <h2>State 2</h2>
+      <State2 />
+      <h2>State 3</h2>
+      <State3 />
     </div>
   );
 }
