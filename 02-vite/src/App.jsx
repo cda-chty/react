@@ -1,4 +1,5 @@
 import Button from './Button';
+import Text from './Text';
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
       <Button title="Valider" />
       <Button title="Ajouter" />
       <Button title="Envoyer" />
+
+      <Text />
     </div>
   );
 }
