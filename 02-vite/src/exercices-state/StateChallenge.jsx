@@ -32,8 +32,10 @@ function StateChallenge() {
                 <li>
                     Afficher la liste des animaux dans une boucle map. Pour chaque animal, afficher son nom et son type.
                     <ul>
-                        {animals.map(animal =>
-                            <li>{animal.name} - {animal.type}</li>
+                        {animals.map((animal, index) =>
+                            <li key={index}>
+                                {animal.name} - {animal.type}
+                            </li>
                         )}
                     </ul>
                     <form action="">
