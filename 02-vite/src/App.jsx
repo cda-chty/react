@@ -4,6 +4,7 @@ import Text from './Text';
 import State1 from './exercices-state/State1';
 import State2 from './exercices-state/State2';
 import State3 from './exercices-state/State3';
+import StateChallenge from './exercices-state/StateChallenge';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <State2 />
       <h2>State 3</h2>
       <State3 />
+      <h2>State challenge</h2>
+      <StateChallenge />
     </div>
   );
 }
