@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Button from './Button';
+import Clock from './Clock';
 import List from './List';
 import Text from './Text';
 import State1 from './exercices-state/State1';
@@ -7,6 +9,8 @@ import State3 from './exercices-state/State3';
 import StateChallenge from './exercices-state/StateChallenge';
 
 function App() {
+  const [show, setShow] = useState(true);
+
   return (
     <div>
       <h1>Vite + React</h1>
@@ -18,14 +22,20 @@ function App() {
       <Text />
       <List />
 
-      <h2>State 1</h2>
+      {show && <Clock timezone="Europe/Paris" />}
+      <button onClick={() => setShow(!show)}>
+        Afficher / Cacher
+      </button>
+      <Clock timezone="Asia/Tokyo" />
+
+      {/*<h2>State 1</h2>
       <State1 />
       <h2>State 2</h2>
       <State2 />
       <h2>State 3</h2>
       <State3 />
       <h2>State challenge</h2>
-      <StateChallenge />
+      <StateChallenge />*/}
     </div>
   );
 }
