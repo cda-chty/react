@@ -16,11 +16,11 @@ function Text() {
     return (
         <>
             <button onClick={() => toggleName('Fiorella')}
-                className={name === 'Fiorella' && 'selected'}>
+                className={name === 'Fiorella' ? 'selected' : ''}>
                 Fiorella
             </button>
             <button onClick={() => toggleName('Toto')}
-                className={name === 'Toto' && 'selected'}>
+                className={name === 'Toto' ? 'selected' : ''}>
                 Toto
             </button>
             <input type="text" value={name} onChange={(event) => setName(event.target.value)} />

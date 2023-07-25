@@ -1,3 +1,8 @@
 .selected {
     background-color: lightblue;
 }
+
+.image {
+    border-radius: 50%;
+    width: 100px;
+} 
