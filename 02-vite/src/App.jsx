@@ -8,6 +8,7 @@ import State2 from './exercices-state/State2';
 import State3 from './exercices-state/State3';
 import StateChallenge from './exercices-state/StateChallenge';
 import Lifecycle1 from './exercices-lifecycle/Lifecycle1';
+import Lifecycle2 from './exercices-lifecycle/Lifecycle2';
 
 function App() {
   const [show, setShow] = useState(true);
@@ -39,6 +40,8 @@ function App() {
       <StateChallenge />*/}
       <h2>Lifecycle 1</h2>
       <Lifecycle1 />
+      <h2>Lifecycle 2</h2>
+      <Lifecycle2 />
     </div>
   );
 }
