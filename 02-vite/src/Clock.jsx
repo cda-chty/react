@@ -9,7 +9,7 @@ function Clock({ timezone }) {
     useEffect(() => {
         let timer = setInterval(() => {
             setDate(new Date());
-            console.log('CALL');
+            // console.log('CALL');
         }, 1000);
 
         return () => {
