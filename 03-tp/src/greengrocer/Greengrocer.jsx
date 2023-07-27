@@ -11,7 +11,7 @@ function Greengrocer() {
     ]);
 
     return (
-        <div className="bg">
+        <div className="greengrocer">
             {fruits.map((fruit, index) => <Fruit key={index} fruit={fruit} />)}
         </div>
     );
