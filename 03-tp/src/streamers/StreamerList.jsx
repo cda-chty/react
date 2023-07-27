@@ -33,39 +33,47 @@ function StreamerList() {
             links: [],
         },
     ]);
+    const [streamerMode, setStreamerMode] = useState(false);
 
     return (
-        <div className="streamers flex">
-            {streamers.map(streamer =>
-                <div key={streamer.id} className="streamer">
-                    <div className="flex">
-                        <div className="avatar">
-                            <img src={streamer.avatar} alt={streamer.name} />
-                            {streamer.premium && <span className="premium">⭐️</span>}
+        <div className="streamers">
+            <div className="flex checkbox">
+                <label htmlFor="streamer">Activer le mode streamer</label>
+                <input type="checkbox" id="streamer" checked={streamerMode} onChange={() => setStreamerMode(!streamerMode)} />
+            </div>
+            <div className="flex list">
+                {streamers.map(streamer =>
+                    <div key={streamer.id} className="streamer">
+                        <div className="flex">
+                            <div className="avatar">
+                                <img src={streamer.avatar} alt={streamer.name} style={{ filter: streamerMode ? 'blur(5px)' : 'blur(0)' }} />
+                                {streamer.premium && <span className="premium">⭐️</span>}
+                            </div>
+                            <div>
+                                {!streamerMode && <p>{streamer.firstname} {streamer.name}</p>}
+                                {streamerMode && <p>{streamer.firstname.charAt(0)}... {streamer.name.charAt(0)}...</p>}
+                                {!streamerMode && <span className="age">{streamer.age} ans.</span>}
+                            </div>
                         </div>
-                        <div>
-                            <p>{streamer.firstname} {streamer.name}</p>
-                            <span className="age">{streamer.age} ans.</span>
-                        </div>
+                        <p className="social-title">
+                            {streamer.links.length > 0 ? 'Réseaux sociaux' : 'Pas de réseaux sociaux associés.'}
+                        </p>
+                        <ul className="social-list">
+                            {streamer.links.map(link =>
+                                <li key={link.name}>
+                                    {link.name === 'TikTok' && '🐶'}
+                                    {link.name === 'Youtube' && '🐱'}
+                                    {link.name === 'Discord' && '🐭'}
+                                    {link.name === 'Twitter' && '🐹'}
+                                    <a href={link.url} target="_blank">
+                                        {link.name}
+                                    </a>
+                                </li>
+                            )}
+                        </ul>
                     </div>
-                    <p className="social-title">
-                        {streamer.links.length > 0 ? 'Réseaux sociaux' : 'Pas de réseaux sociaux associés.'}
-                    </p>
-                    <ul className="social-list">
-                        {streamer.links.map(link =>
-                            <li>
-                                {link.name === 'TikTok' && '🐶'}
-                                {link.name === 'Youtube' && '🐱'}
-                                {link.name === 'Discord' && '🐭'}
-                                {link.name === 'Twitter' && '🐹'}
-                                <a href={link.url} target="_blank">
-                                    {link.name}
-                                </a>
-                            </li>
-                        )}
-                    </ul>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 }

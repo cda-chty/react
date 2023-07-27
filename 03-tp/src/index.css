@@ -71,9 +71,22 @@ body {
 .streamers {
   background-color: #1b2656;
   padding: 15px;
+}
+
+.streamers .list {
   gap: 15px;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.streamers .checkbox {
+  color: #fff;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.streamers .checkbox label {
+  margin-right: 5px;
 }
 
 .streamer {
