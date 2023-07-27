@@ -12,9 +12,11 @@ function Greengrocer() {
 
     return (
         <div className="bg">
-            {fruits.map((fruit, index) => <Fruit key={index} fruit={fruit} />)}
+            {fruits.map((fruit, index) =>
+                <Fruit key={index} fruit={fruit} />
+            )}
         </div>
     );
 }
- 
+
 export default Greengrocer;

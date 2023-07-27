@@ -2,7 +2,7 @@ function Fruit({ fruit }) {
     return (
         <div className="fruit">
             <div>
-                {fruit.name} au prix de {fruit.price} € 
+                {fruit.name} au prix de {fruit.price} €
             </div>
 
             <div>
