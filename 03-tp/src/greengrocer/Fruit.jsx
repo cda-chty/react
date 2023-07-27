@@ -1,6 +1,6 @@
 function Fruit({ fruit }) {
     return (
-        <div className="fruit">
+        <div className="fruit flex">
             <div>
                 {fruit.name} au prix de {fruit.price} €
             </div>
