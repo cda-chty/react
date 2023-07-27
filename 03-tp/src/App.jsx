@@ -1,4 +1,5 @@
 import Greengrocer from './greengrocer/Greengrocer'
+import StreamerList from './streamers/StreamerList'
 
 function App() {
   return (
@@ -9,8 +10,13 @@ function App() {
       <div className="section">
         <Greengrocer />
       </div>
-      <h2>Les profils</h2>
-      <h2>Vrello</h2>
+
+      <h2 className="title">Les profils</h2>
+      <div className="section">
+        <StreamerList />
+      </div>
+
+      <h2 className="title">Vrello</h2>
     </div>
   )
 }
