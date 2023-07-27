@@ -12,6 +12,10 @@ body {
   margin: auto;
 }
 
+.flex {
+  display: flex;
+}
+
 .section {
   margin: 20px 0;
 }
