@@ -51,3 +51,19 @@ body {
 .greengrocer .not-in-stock {
   background-color: #c7306a;
 }
+
+.greengrocer .quantity {
+  margin-right: 10px;
+}
+
+.greengrocer .quantity button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.greengrocer .quantity span {
+  padding: 5px;
+  text-align: center;
+  width: 50px;
+  display: inline-block;
+}
