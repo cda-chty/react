@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function StreamerList() {
-    const [streamers, setStreamers] = useState([
+    const [streamers] = useState([
         {
             id: 1, firstname: 'Jean', name: 'Dupont', premium: false,
             age: 36, avatar: 'https://i.pravatar.cc/150?u=jean-dupont',
@@ -46,7 +46,7 @@ function StreamerList() {
                     <div key={streamer.id} className="streamer">
                         <div className="flex">
                             <div className="avatar">
-                                <img src={streamer.avatar} alt={streamer.name} style={{ filter: streamerMode ? 'blur(5px)' : 'blur(0)' }} />
+                                <img src={streamer.avatar} alt={streamer.name} style={{ filter: `blur(${streamerMode ? 5 : 0}px)` }} />
                                 {streamer.premium && <span className="premium">⭐️</span>}
                             </div>
                             <div>
