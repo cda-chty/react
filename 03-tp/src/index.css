@@ -186,3 +186,12 @@ body {
   padding: 10px;
   justify-content: space-between;
 }
+
+.vrello .task .done {
+  text-decoration: line-through;
+}
+
+.vrello .task .delete {
+  cursor: pointer;
+  margin-left: 10px;
+}
