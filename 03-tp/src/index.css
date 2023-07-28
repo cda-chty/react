@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -137,4 +138,46 @@ body {
 .streamer .social-list a {
   color: #bfb383;
   margin-left: 5px;
+}
+
+.vrello {
+  margin-bottom: 200px;
+  background-color: gainsboro;
+  padding: 20px;
+}
+
+.vrello .flex {
+  gap: 20px;
+}
+
+.vrello form {
+  margin-bottom: 20px;
+}
+
+.vrello form input {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  margin-right: 5px;
+}
+
+.vrello form button {
+  background-color: transparent;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.vrello .column {
+  width: 50%;
+}
+
+.vrello .column h2 {
+  margin-bottom: 20px;
+}
+
+.vrello .task {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  justify-content: space-between;
 }

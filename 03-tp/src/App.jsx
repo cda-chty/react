@@ -1,5 +1,6 @@
 import Greengrocer from './greengrocer/Greengrocer'
 import StreamerList from './streamers/StreamerList'
+import Vrello from './vrello/Vrello'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       </div>
 
       <h2 className="title">Vrello</h2>
+      <div className="section">
+        <Vrello />
+      </div>
     </div>
   )
 }
