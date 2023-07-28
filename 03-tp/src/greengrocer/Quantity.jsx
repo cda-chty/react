@@ -1,13 +1,13 @@
-import { useState } from 'react';
-
-function Quantity({ max }) {
-    const [quantity, setQuantity] = useState(0);
+function Quantity({ quantity, max, onUpdate }) {
+    const updateQuantity = (value) => {
+        onUpdate(value);
+    }
 
     return (
         <div className="quantity">
-            <button onClick={() => setQuantity(quantity - 1)} disabled={quantity <= 0}>-</button>
+            <button onClick={() => updateQuantity(-1)} disabled={quantity <= 0}>-</button>
             <span>{quantity}</span>
-            <button onClick={() => setQuantity(quantity + 1)} disabled={quantity >= max}>+</button>
+            <button onClick={() => updateQuantity(1)} disabled={quantity >= max}>+</button>
         </div>
     );
 }

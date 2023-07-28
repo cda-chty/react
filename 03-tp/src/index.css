@@ -39,6 +39,11 @@ body {
   align-items: center;
 }
 
+.greengrocer .fruit > .flex {
+  align-items: center;
+  gap: 20px;
+}
+
 .greengrocer .badge {
   padding: 5px 10px;
   border-radius: 20px;
