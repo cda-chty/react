@@ -39,7 +39,7 @@ function StreamerList() {
         <div className="streamers">
             <div className="flex checkbox">
                 <label htmlFor="streamer">Activer le mode streamer</label>
-                <input type="checkbox" id="streamer" checked={streamerMode} onChange={() => setStreamerMode(!streamerMode)} />
+                <input type="checkbox" id="streamer" checked={streamerMode} onChange={(e) => setStreamerMode(e.target.checked)} />
             </div>
             <div className="flex list">
                 {streamers.map(streamer =>
